@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import ReactTable from '../common/ReactTable';
+import ReactTable from '../common/util/ReactTable';
 
 
 export default class InvitedUsersTable extends Component {

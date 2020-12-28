@@ -1,6 +1,7 @@
 import { ButtonGroup, Button } from 'react-bootstrap';
 import ActiveTreeMapUsers from './ActiveUsersTable';
 import InvitedUsersTable from './InvitedUsersTable';
+import Sidebar from './Sidebar';
 
 
 export const Users = (props) => {

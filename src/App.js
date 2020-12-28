@@ -4,6 +4,8 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 import Users from './admin/Users';
 import Admin from './admin/Admin';
+import MapMain from './map/MapMain';
+import Map from './map/Map';
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -12,8 +14,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 class App extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-        };
+        this.state = { };
     }
 
     render() {
@@ -24,7 +25,7 @@ class App extends Component {
                     <Navbar.Collapse>
                         <Nav>
                             <Nav.Link href="/">Add A Tree</Nav.Link>
-                            <Nav.Link href="/users">Explore Map</Nav.Link>
+                            <Nav.Link href="/map">Explore Map</Nav.Link>
                             <Nav.Link href="/users">View Edits</Nav.Link>
                             <Nav.Link href="/admin">Manage</Nav.Link>
                             <Nav.Link href="/users">Dashboard</Nav.Link>
@@ -40,8 +41,8 @@ class App extends Component {
                 </Navbar>
                 <Router>
                     <Switch>
-                        <Route exact path='/users' component={Users} />
-                        <Route exact path='/admin' component={Admin} />
+                        <Route path='/admin' component={Admin} />
+                        <Route path='/map' component={MapMain} />
                         <Route exact path='/' component={Users} />
                     </Switch>
                 </Router>
